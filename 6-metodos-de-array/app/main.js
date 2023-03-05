@@ -1,5 +1,6 @@
 let livros = []
 const endpointDaAPI = "https://guilhermeonrails.github.io/casadocodigo/livros.json"
+getBuscarLivrosAPI()
 const elementoInserirLivros = document.getElementById("livros")
 
 // Deixando em Asinc pq podem ser muitos livros
@@ -13,7 +14,7 @@ async function getBuscarLivrosAPI() {
 function exibirLivros(listaLivros) {
   listaLivros.forEach(livro => {
     elementoInserirLivros.innerHTML += `
-    <!--   <div class="livro">
+  <div class="livro">
         <img class="livro__imagens" src="${livro.imagem}" alt="${livro.alt}" />
         <h2 class="livro__titulo">${livro.titulo}</h2>
         <p class="livro__descricao"></p>
