@@ -1,6 +1,7 @@
 const elementoParaInserirLivros = document.getElementById("livros")
 
 function exibirOsLivrosNaTela(listaDeLivros) {
+  elementoParaInserirLivros.innerHTML = ""
   // O forEach é como se fosse um ForLoop que passa por cada um dos objetos da Array e faz uma ação
   listaDeLivros.forEach(livro => {
     elementoParaInserirLivros.innerHTML += `
