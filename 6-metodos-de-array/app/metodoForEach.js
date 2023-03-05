@@ -1,9 +1,12 @@
 const elementoParaInserirLivros = document.getElementById("livros")
+const elementoComValorTotalDeLivrosDisponiveis = document.getElementById("valor_total_livros_disponiveis")
 
 function exibirOsLivrosNaTela(listaDeLivros) {
+  elementoComValorTotalDeLivrosDisponiveis.innerHTML = ""
   elementoParaInserirLivros.innerHTML = ""
   // O forEach é como se fosse um ForLoop que passa por cada um dos objetos da Array e faz uma ação
   listaDeLivros.forEach(livro => {
+    // let disponibilidade = verificarDisponibilidadeDoLivro(livro)
     let disponibilidade = livro.quantidade > 0 ? "livro__imagens" : "livro__imagens indisponivel"
     elementoParaInserirLivros.innerHTML += `
         <div class="livro">
@@ -21,3 +24,11 @@ function exibirOsLivrosNaTela(listaDeLivros) {
         `
   })
 }
+
+// function verificarDisponibilidadeDoLivro(livro) {
+//   if (livro.quantidade > 0 ){
+//     return 'livro__imagens'
+//   } else {
+//     return 'livros__imagens indisponivel'
+//   }
+// }
